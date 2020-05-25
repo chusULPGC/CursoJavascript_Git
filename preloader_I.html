@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="Jquery/jquery-1.6.3.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+            
+            var foto_nueva=new Image();
+            foto_nueva.src="imgs/1.jpg";
+            
+        
+		$("#foto").hover(function(){
+			
+			$(this).attr("src",foto_nueva.src);
+			
+		},
+		function(){
+			
+			$(this).attr("src","imgs/imgs2/1.jpg");
+			
+			
+		});	
+		
+    });
+
+
+</script>
+</head>
+
+<body>
+
+<img src="imgs/imgs2/1.jpg" width="300" height="200" id="foto">
+</body>
+</html>
