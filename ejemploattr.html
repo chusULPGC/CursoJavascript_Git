@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            img{
+                width: 275px;
+                height: 175px;
+            }
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                document.getElementById("img1").addEventListener("mouseover",cambiar,false);                
+                document.getElementById("img1").addEventListener("mouseout",reestaurar,false);                
+            })
+            
+            function cambiar(){
+                $("#img1").attr("src","imgs/arbol2.jpg");                
+            }
+            
+            function reestaurar(){
+                $("#img1").attr("src","imgs/arbol.jpg");                
+            }
+            
+        </script>
+        
+        
+    </head>
+    
+    
+    <body>
+        
+        <img src="imgs/arbol.jpg" id="img1">    
+        
+    </body>
+</html>

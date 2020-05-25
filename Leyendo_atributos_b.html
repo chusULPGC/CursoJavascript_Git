@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin título</title>        
+        <link rel="stylesheet" href="css/leyendoAtributos.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $("document").ready(function () {
+            //    $("a[href^='https://']").addClass("linkdestacacursos");
+            
+            document.getElementById("cursos").addEventListener("click",resaltacursos,false);            
+            document.getElementById("informacion").addEventListener("click",resaltaejemplos,false);
+            });
+            
+            function resaltacursos(){
+           //     $(".ejemplos").removeClass("linkdestacacursos");
+           //     $(".cursos").addClass("linkdestacacursos");
+                  $(".cursos").toggleClass("linkdestacacursos");
+            }
+            
+            function resaltaejemplos(){
+            //  $(".cursos").removeClass("linkdestacacursos");
+            //  $(".ejemplos").addClass("linkdestacacursos");
+                $(".ejemplos").toggleClass("linkdestacacursos");
+            }
+            
+            
+
+        </script>
+
+    </head>
+    <body>
+
+        <div id="contieneEnlaces">
+
+            <a href="http://www.pildorasinformaticas.com" target="_blank" class="cursos">
+                Píldoras informáticas
+            </a><br>
+
+            <a href="http://www.google.com" target="_blank" class="ejemplos">
+                Google
+            </a><br>
+
+            <a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" class="cursos">
+                Píldoras informáticas YouTube
+            </a><br>
+
+            <a href="remover_reemplazar.html" target="_blank" >
+                Remover y reemplazar
+            </a><br>
+
+            <a href="https://news.google.es/" target="_blank" class="ejemplos">
+                Noticias google
+            </a><br>
+
+            <a href="calculadora_arcaica.html" target="_blank" >
+                Calculadora
+            </a>
+        </div>
+
+        <table width="100%" border="1">
+            <tr>
+                <td>Cursos destacados&nbsp;&nbsp;<input type="checkbox"  value="Cursos" id="cursos"></td>
+                <td>Información adicional&nbsp;&nbsp;<input type="checkbox"  value="Información" id="informacion"></td>
+            </tr>
+        </table>
+
+
+
+
+    </body>
+</html>

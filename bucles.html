@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body>
+
+        <table width="25%" border="0">
+            <tr>
+                <td><label for="textfield"></label>
+                    <input type="text" name="textfield" id="c_mensaje"></td>
+                <td><label for="textfield2"></label>
+                    <input type="text" name="textfield2" id="c_intentos"></td>
+            </tr>
+
+
+        </table>
+
+        <script>
+
+            var aleatorio = Math.round((Math.random() * 100));
+
+            var minum = 0;
+            var intentos = 0;
+            var mensaje = document.getElementById("c_mensaje");
+            var intentos_consumidos = document.getElementById("c_intentos");
+
+            do {
+                minum = prompt("introduce un nº entre 0 y 100");
+                if (aleatorio > minum) {
+                    mensaje.value = "Más alto";
+                    mensaje.style.fontSize="18px";
+                }
+
+                if (aleatorio < minum) {
+                    mensaje.value="Más bajo";
+                    mensaje.style.fontSize="18px";
+                }
+                intentos++;
+                intentos_consumidos.value=intentos;
+                intentos_consumidos.style.fontSize="18px";
+                if(intentos>=6){
+                intentos_consumidos.style.color="red";
+                }else{
+                    intentos_consumidos.style.color="blue";
+                }
+                intentos_consumidos.style.textAlign="center";
+            } while (aleatorio != minum);
+                mensaje.value="Correcto!";
+                mensaje.value="Correcto!";
+                mensaje.style.color="green";
+        </script>
+
+
+    </body>
+</html>

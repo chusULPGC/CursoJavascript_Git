@@ -1,0 +1,26 @@
+img{
+    float: left;
+    margin: 15px;
+    width: 250px;
+    height: 175px;
+}
+
+#banner{
+    background-color: #F00;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+#imagen1, #imagen2, #imagen3, #imagen4{
+    float: left;
+    margin:15px;
+    width: 250px;
+    height: 175px;
+    font-size: 32px;
+
+}

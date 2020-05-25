@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin título</title>
+        <style>
+
+            img{
+                opacity:0.5;
+            }
+            .aa{
+                opacity: 1;
+            }
+
+
+        </style>
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                $("#imagen").mouseover(function () {
+                    $(this).animate({
+                        opacity: 1
+                    })
+                })
+
+                $("#imagen").click(
+                        function () {
+                            $(this).animate(
+                                    {marginLeft: "+=150px"
+                                    }, 1000);
+                        })
+
+                $("#imagen").mouseout(function () {
+                    $(this).animate({
+                        opacity: 0.5
+                    })
+                })
+
+            });
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <img src="imgs/coche.png" width="300" height="200" id="imagen">
+
+    </body>
+</html>

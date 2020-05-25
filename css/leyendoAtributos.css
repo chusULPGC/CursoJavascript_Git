@@ -1,0 +1,32 @@
+
+.linkdestacacursos{
+    /*background-color:#F00;*/
+    color:#f00;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+
+a{
+    display:block;
+    margin-bottom:20px;
+    font-size:24px;
+}
+table{
+    text-align:center;
+    border:none;
+}
+
+td{
+    border:none;
+}
+
+#contieneEnlaces {
+    position: absolute;
+    left: 31px;
+    top: 65px;
+    width: 400px;
+    height: 649px;
+    z-index: 1;
+    padding-top:100px;
+}

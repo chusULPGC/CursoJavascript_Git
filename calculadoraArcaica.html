@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+
+            function suma(num1, num2) {
+                var resultado = num1 + num2;
+                document.write(num1 + "+" + num2 + "=" + resultado);
+            }
+
+            function resta(num1, num2) {
+                var resultado = num1 - num2;
+                document.write(num1 + "-" + num2 + "=" + resultado);
+            }
+
+            function multiplicacion(num1, num2) {
+                var resultado = num1 * num2;
+                document.write(num1 + "*" + num2 + "=" + resultado);
+            }
+
+            function division(num1, num2) {
+                var resultado = num1 / num2;
+                document.write(num1 + "/" + num2 + "=" + resultado);
+            }
+
+
+            var operacion = prompt("¿Que operación deseas realizar?");
+
+            var operador1 = prompt("introduce el primer valor");
+            var operador2 = prompt("introduce el segundo valor");
+            operador1 = parseInt(operador1);
+            operador2 = parseInt(operador2);
+
+             if (operacion == "suma") {
+                suma(operador1, operador2);
+            } else if (operacion == "resta") {
+                resta(operador1, operador2);
+            } else if (operacion == "multiplicacion") {
+                multiplicacion(operador1, operador2);
+            } else if (operacion == "division") {
+                division(operador1, operador2);
+            } else {
+                alert("Operación no permitida");
+            }
+
+
+
+
+        </script>
+
+
+
+
+    </head>
+
+
+
+
+
+    <body>
+    </body>
+</html>

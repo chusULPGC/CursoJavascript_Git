@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            #contenedor{
+                width: 25%;
+                background-color: #FFC;
+                margin: auto;
+                padding:15px;                
+        </style>
+
+        
+        <script>
+           
+            var nombre,edad,poblacion;
+            nombre=prompt("Introduce tu nombre por favor");
+            while(!isNaN(nombre) ){
+                nombre=prompt("introduce un nombre válido");
+            }
+            edad=prompt("Introduce tu edad por favor");
+            while(edad <= 0 || edad > 105 || isNaN(edad)){
+                edad=prompt("introduce una edad válida");
+            }
+            poblacion=prompt("Introduce tu población por favor");
+             while(!isNaN(poblacion) ){
+                poblacion=prompt("introduce una población válido");
+            }
+            
+            
+        </script>
+
+    </head>
+
+
+
+    <body>
+
+        <div id="contenedor">
+
+            <p>Nombre:<script>document.write(nombre);</script></p>
+            <p>Edad:<script>document.write(edad);</script></p>
+            <p>Población:<script>document.write(poblacion);</script></p>
+
+
+        </div>
+
+    </body>
+</html>

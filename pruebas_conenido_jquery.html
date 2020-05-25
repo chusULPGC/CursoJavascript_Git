@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <script>
+            function validar() {
+                var n_usuario = document.getElementById("usuario").value;
+                var nombre = document.getElementById("nombre").value;
+                var apellido = document.getElementById("apellido").value;
+                if (n_usuario === "") {
+                    $("#usuario").after(" Rellena este campo por favor");
+                } else if (nombre === "") {
+                    $("#nombre").after("Rellena este campo por favor");
+                } else if (apellido === "") {
+                    $("#apellido").after(" Rellena este campo por favor");
+                }
+
+            }
+
+        </script>
+
+
+
+    </head>
+
+
+    <body>
+
+        <form action="" method="get">
+
+            <input name="usuario" type="text" id="usuario"><br>
+
+            <input name="nombre" type="text" id="nombre"><br>
+
+            <input name="apellido" type="text" id="apellido"><br>
+
+            <input type="button" value="Dale" onClick="validar()">
+
+
+
+        </form>
+
+
+    </body>
+</html>

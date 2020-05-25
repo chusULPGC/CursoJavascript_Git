@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function dia_de_hoy(){
+                
+                var hoy= new Date();
+                document.write(hoy.toDateString());
+            }
+        
+            function suma(num1,num2){
+                var resultado=num1+num2;
+                document.write(resultado);
+            }
+    
+        </script>
+        
+        
+        
+    </head>
+
+
+    <body>
+
+        <h1 align="center">¿Y que día es hoy?</h1>
+        <P align="center">hoy es día: <script>dia_de_hoy();</script></P>
+        
+        <script>
+            
+            var num1 = prompt("dame primer valor");
+            var num2 = prompt("dame segundo valor");
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            suma(num1,num2);
+            
+        </script>
+        
+    </body>
+</html>

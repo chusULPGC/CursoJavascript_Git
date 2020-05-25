@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Usando Arrays</title>
+        <link rel="stylesheet" href="css/micss.css">
+        <script>
+            var articulos = ["zapatillas", "pantalon", "camiseta", "calcetines"];
+
+
+        </script>
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+                </p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1>Manejando Arrays</h1>
+                    <script>
+
+                        document.write("<p>" + articulos + "</p>");
+                        var nuevo = prompt("¿Quiere añadir otro elemento?");
+                        articulos.push(nuevo);
+                        document.write("<p>" + articulos + "</p>");
+
+                        document.write("........................................");
+
+
+                        for (var i = 0; i <= articulos.length; i++) {
+                            document.write("<p>" + articulos[i] + "</p>");
+                        }
+
+                        
+
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
