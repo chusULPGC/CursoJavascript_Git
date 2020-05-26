@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin título</title>
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        <script>
+
+            open("http://www.pildorasinformaticas.es", "Pildoras Informáticas", "width=300, height=200, left=, top=100");
+
+            $(document).ready(function (e) {
+                var mi_ventana= open("http://www.pildorasinformaticas.es", "Pildoras Informáticas", "width=300, height=200, left=, top=100");
+
+                $("#botonCerrar").click(function (e) {
+                    e.preventDefault();
+                    mi_ventana.close();
+                });
+            });
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <a href="http://www.pildorasinformaticas.es">Ir a Píldoras</a>
+        <br><br><br>
+        <a href="" id="botonCerrar">Cerrar</a>
+    </body>
+</html>
