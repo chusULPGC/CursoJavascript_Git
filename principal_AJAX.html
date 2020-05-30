@@ -25,10 +25,19 @@
                 border: 1px solid white;	
             }
         </style>
-        <script src="../Jquery/jquery-2.1.3.js"></script>
+        <script src="Jquery/jquery-3.5.1.js"></script>
         <script>
 
             $(document).ready(function () {
+                $("#noticias a").click(
+                        function () {
+                            var url=$(this).attr("href");
+                            $("#contenidos_externos").load(url+ " #noticia"); //con #noticia le digo q parte quiero que carge de la otra web(deportivas_AJAX.html) HAY QUE DEJAR ESPACIO EN BLANCO 
+                                                       
+
+                            return false; //con esto inhabilito el comportamiento por defecto de <a> 
+                            //que sería cargar la página en otra página nueva
+                        });
 
 
 
@@ -49,9 +58,11 @@
                     <li><a href="deportivas_AJAX.html">Noticias Deportivas</a></li>
                     <li><a href="tiempo_AJAX.html">Noticias del Tiempo</a></li>
                 </ul>
-                <div id="contenidos_externos"></div>
+
+                <div id="contenidos_externos">
+
+                </div>
             </div>
         </div>
-
     </body>
 </html>
