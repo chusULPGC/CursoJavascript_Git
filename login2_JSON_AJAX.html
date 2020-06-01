@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Noticias varias</title>
-        <link href="externa.css" rel="stylesheet">
+        <link href="css/externa.css" rel="stylesheet">
         <style>
             #noticias li {
                 display: inline-block;
@@ -19,46 +19,45 @@
                 background-color: rgb(255,153,0);
                 color: white;
             }
-            #contenidos_externos #noticia {
+            #contenidos_externos, #noticia {
                 margin-top: 10px;
                 padding: 20px;
                 border: 1px solid white;	
             }
+
         </style>
+        <script src="Jquery/jquery-2.1.3.js"></script>
 
-        <link href="css/externa.css" rel="stylesheet">
-
-        <script src="Jquery/jquery-3.5.1.js"></script>
         <script>
 
             $(document).ready(function () {
-                $("#login").submit(
-                        function () {
-                            /*var datosFormulario = {usuario: $("#usuario").val(),
-                             contra: $("#contra").val()}*/
 
-                            var datosFormulario = $(this).serialize();
-                            
+                $("#login").submit(function () {
+
+              
+
+                    var datosFormulario = $(this).serialize();
+                    $.getJSON("login2BD.php", datosFormulario, procesarDatos);
+                    
+                    return false;
 
 
-                            $.get("login.php", datosFormulario, procesarDatos).fail(procesarError);
-                            return false;
-                        });
+               
 
-                function procesarDatos(datos_devueltos) {//en datos_devueltos se almacena la respuesta que da login.php (autorizado o falso)
-                    if (datos_devueltos == "autorizado") {
-                        $("#contenidos_externos").html("<p> Usuario correcto. Bienvenido de nuevo </p>");
-                    } else {
-                        $("#contenidos_externos").html("<p> Usuario no autorizado </p>");
-                    }
+                });
+
+                function procesarDatos(datos_devueltos) {
+                    
+                    //$("#contenidos_externos").html("<P>" + datos_devueltos.Edad + "</p>");
+
+                    var informacion = "<p>Nombre:" + datos_devueltos.Nombre + "</p>";
+                    informacion += "<p>Apellido:" + datos_devueltos.Apellido + "</p>";
+                    informacion += "<p>Edad:" + datos_devueltos.Edad + "</p>";
+                    
+                    $("#contenidos_externos").html(informacion);
+
+
                 }
-
-
-                function procesarError() {
-                    var msgError = "Ooops!! Ha ocurrido algo inesperado. Por favor intentalo más tarde";
-                    $("#contenidos_externos").html("<p>" + msgError + "</p>");
-                }
-
 
 
             });
@@ -71,7 +70,7 @@
         </div>
         <div class="contenido">
             <div class="principal">
-                <form method="get" action="login.php" id="login">
+                <form method="get" action="login2BD.php" id="login">
                     <table>
                         <tr>
                             <td>					
@@ -82,12 +81,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <label for="contra">Contaseña: </label>
-                            </td>
-                            <td>
-                                <input type="password" name="contra" id="contra">
-                            </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
@@ -96,10 +91,10 @@
                         </tr>
                     </table>
                 </form>
+
                 <div id="contenidos_externos">
 
                 </div>
-
             </div>
         </div>
 
